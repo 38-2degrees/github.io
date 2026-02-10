@@ -1,0 +1,48 @@
+body {
+  background: #ffffff;
+  color: #222;
+}
+
+.hero {
+  margin-bottom: 72px;
+}
+
+.title {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 2.4rem;
+  letter-spacing: 0.08em;
+}
+
+.subtitle {
+  margin-top: 10px;
+  color: #6aaeb5;
+}
+
+h2 {
+  color: #333;
+}
+
+.list li {
+  padding-left: 8px;
+}
+
+a {
+  color: #6aaeb5;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.nav {
+  margin-top: 80px;
+  text-align: left;
+}
+
+.footer {
+  text-align: center;
+  padding: 40px 0;
+  color: #999;
+  font-size: 0.8rem;
+}
