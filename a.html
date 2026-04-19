@@ -13,7 +13,7 @@ body {
   background: #0a0a0a;
   color: white;
   font-family: "DotGothic16", sans-serif;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
 section {
@@ -22,6 +22,7 @@ section {
   margin: auto;
 }
 
+/* ファーストビュー */
 .hero {
   height: 100vh;
   display: flex;
@@ -31,18 +32,14 @@ section {
 
 .temp {
   font-size: 80px;
-}
-
-.name {
-  font-size: 28px;
-  opacity: 0.8;
+  margin-bottom: 10px;
 }
 
 .desc {
-  margin-top: 10px;
   opacity: 0.7;
 }
 
+/* SNS */
 .sns {
   margin-top: 20px;
 }
@@ -51,40 +48,68 @@ section {
   color: #2fd3b5;
   text-decoration: none;
   margin-right: 15px;
+  border-bottom: 1px solid transparent;
 }
 
+.sns a:hover {
+  border-bottom: 1px solid #2fd3b5;
+}
+
+/* セクション */
 h2 {
   border-left: 4px solid #2fd3b5;
   padding-left: 10px;
+  margin-bottom: 10px;
 }
 
 .card {
   background: #111;
-  padding: 15px;
-  margin-top: 10px;
+  padding: 20px;
   border-radius: 10px;
+}
+
+/* Works（動画） */
+.works {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.works iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: none;
+  border-radius: 8px;
+}
+
+/* レスポンシブ */
+@media (max-width: 700px) {
+  .temp {
+    font-size: 56px;
+  }
+
+  .works {
+    grid-template-columns: 1fr;
+  }
 }
 </style>
 </head>
 
 <body>
 
-<!-- ファーストビュー -->
 <section class="hero">
   <div class="temp">38.2°C</div>
-  <div class="name">@38_2C</div>
   <div class="desc">
-    群馬県在住 / オタク / 音楽・開発系
+    群馬県在住 / オタク / 音楽・開発
   </div>
 
   <div class="sns">
-    <a href="https://www.instagram.com/your_id" target="_blank" rel="noopener noreferrer">Instagram</a>
-    <a href="https://www.youtube.com/@your_channel" target="_blank" rel="noopener noreferrer">YouTube</a>
+    <a href="https://www.instagram.com/382c_konetsu" target="_blank" rel="noopener noreferrer">Instagram</a>
+    <a href="https://www.youtube.com/@38.2C" target="_blank" rel="noopener noreferrer">YouTube</a>
     <a href="https://twitter.com/38_2C" target="_blank" rel="noopener noreferrer">Twitter</a>
   </div>
 </section>
 
-<!-- 名刺内容（完全転記） -->
 <section>
   <h2>About</h2>
   <div class="card">
@@ -94,7 +119,6 @@ h2 {
   </div>
 </section>
 
-<!-- スキル -->
 <section>
   <h2>Skills</h2>
   <div class="card">
@@ -102,38 +126,27 @@ h2 {
   </div>
 </section>
 
-<!-- 所属・活動 -->
 <section>
-  <h2>Activity</h2>
+  <h2>A Member Of</h2>
   <div class="card">
     ・Holofans Orchestra<br>
     ・Holofans Ensemble<br>
-    ・Holofan / Chihamic / FLOMIE / Otomos / Pioneer / Stargazers
+    ・Holofan / ChihaNic / FLOMIE / Otomos / Pioneer / Stargazers
   </div>
 </section>
 
-<!-- 出演作品（追加） -->
 <section>
   <h2>Works</h2>
-  <div class="card">
-  <iframe width="400" height="225" src="https://www.youtube.com/embed/bNybLpk6HKQ" title="【演奏してみた】メイジ・オブ・ヴァイオレット / ホロ卒への手向け【#ホロリスアンサンブル 】" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-  <iframe width="400" height="225" src="https://www.youtube.com/embed/BEX7H7ff2Lw" title="【 #演奏してみた 】ビビデバ / 星街すいせい　自由に奏でた者勝ちでしょう？【 #ホロリスアンサンブル 】" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <div class="card works">
+    <iframe src="https://www.youtube.com/embed/bNybLpk6HKQ" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/BEX7H7ff2Lw" allowfullscreen></iframe>
   </div>
 </section>
 
-<!-- 詳細興味 -->
 <section>
   <h2>Interests</h2>
   <div class="card">
-    公共交通 / プログラミング / DTM / 作曲 / 電子工作 / 鉄道 / 車 / 旅行
-  </div>
-</section>
-
-<!-- 連絡 -->
-<section>
-  <h2>Contact</h2>
-  <div class="card">
-    mail@example.com
+    プログラミング / DTM / 編曲 / 作曲 / 電子工作 / 鉄道 / 車 / 旅行
   </div>
 </section>
 
