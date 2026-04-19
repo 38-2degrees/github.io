@@ -1,77 +1,182 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <title>38.2°C — Identity</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>38.2°C Web名刺</title>
 
-  <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/dark.css">
+<link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+
+<style>
+body {
+  margin: 0;
+  background: #0d0d0d;
+  font-family: "DotGothic16", sans-serif;
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  max-width: 900px;
+  width: 100%;
+  margin: 20px;
+  border-radius: 20px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #1aa39a, #2fd3b5);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+}
+
+/* 上部 */
+.header {
+  position: relative;
+  padding: 20px;
+  color: white;
+}
+
+.bg {
+  position: absolute;
+  inset: 0;
+  background: url('your-image.jpg') center/cover;
+  opacity: 0.35;
+}
+
+.header-content {
+  position: relative;
+}
+
+.temp {
+  font-size: 64px;
+  text-align: right;
+}
+
+.name {
+  font-size: 24px;
+}
+
+/* 本文 */
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  color: white;
+}
+
+.left, .right {
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.left {
+  width: 40%;
+}
+
+.right {
+  width: 60%;
+}
+
+.section-title {
+  margin-top: 10px;
+  opacity: 0.7;
+}
+
+.line {
+  height: 2px;
+  background: white;
+  margin: 10px 0;
+  opacity: 0.4;
+}
+
+/* SNS */
+.sns a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  margin: 4px 0;
+  transition: 0.2s;
+}
+
+.sns a:hover {
+  opacity: 0.6;
+}
+
+/* QR */
+.qr {
+  margin-top: 10px;
+}
+
+/* レスポンシブ */
+@media (max-width: 700px) {
+  .left, .right {
+    width: 100%;
+  }
+
+  .temp {
+    font-size: 48px;
+  }
+}
+</style>
 </head>
+
 <body>
+<div class="card">
 
-<main class="container">
+  <div class="header">
+    <div class="bg"></div>
+    <div class="header-content">
+      <div class="temp">38.2°C</div>
+      <div class="name">@38_2C</div>
+    </div>
+  </div>
 
-  <!-- HERO -->
-  <section class="hero">
-    <h1 class="temp">38.2<span>°C</span></h1>
-    <h2 >注:このページはまだ工事中です</h2>
-    <p class="tagline">Digital Identity / Personal Profile</p>
-  </section>
+  <div class="main">
 
-  <!-- BASIC INFO -->
-  <section class="block">
-    <h2>About</h2>
-    <p>
-      Developer and saxophone player.  <br>
-      Interested in system design, sound, minimal interfaces, and identity. <br>
-      I enjoy building things that connect digital systems and personal expression. <br>
-    </p>
-  </section>
+    <div class="left">
+      <div>
+        群馬県在住のオタク。<br>
+        ホロライブ / ホロスターズ好き
+      </div>
 
-  <!-- SKILLS -->
-  <section class="block">
-    <h2>Skills</h2>
-    <ul class="list">
-      <li>Python</li>
-      <li>Django</li>
-      <li>HTML / CSS (Static Web)</li>
-      <li>Soprano Saxophone</li>
-      <li>Baritone Saxophone</li>
-    </ul>
-  </section>
+      <div class="line"></div>
 
-  <!-- ACTIVITIES -->
-  <section class="block">
-    <h2>Activities</h2>
-    <p>
-      Web development<br>system design,<br>music performance,<br>and personal branding
-      through digital and physical media such as websites and printed cards.
-    </p>
-  </section>
+      <div class="section-title">Skills</div>
+      B.Sax / Drums / Perc.
 
-  <!-- LINKS -->
-  <section class="block">
-    <h2>Links</h2>
-    <ul class="links">
-      <li><a href="https://github.com/38-2degrees" target="_blank">GitHub</a></li>
-      <li><a href="https://x.com/38_2C" target="_blank">Twitter</a></li>
-      <li><a href="https://www.instagram.com/100_76f/" target="_blank">Instagram</a></li>
-      <li><a href="https://www.youtube.com/@38.2C" target="_blank">YouTube</a></li>
-    <!--  <li><a href="https://soundcloud.com/USERNAME" target="_blank">SoundCloud</a></li>-->
-    </ul>
-  </section>
+      <div class="section-title">Affiliation</div>
+      ・Holofans Orchestra<br>
+      ・Holofans Ensemble<br>
+      ・FLOMIE 他
+    </div>
 
-  <!-- NAV -->
-  <section class="nav">
-    <a href="b.html">→ Other Side (Favorites)</a>
-  </section>
+    <div class="right">
 
-</main>
+      <div class="section-title">Links</div>
+      <div class="sns">
+        <a href="https://twitter.com/38_2C" target="_blank">Twitter</a>
+        <a href="https://github.com/yourname" target="_blank">GitHub</a>
+        <a href="https://www.youtube.com/" target="_blank">YouTube</a>
+        <a href="https://discord.com/" target="_blank">Discord</a>
+      </div>
 
-<footer class="footer">
-  <p>38.2°C</p>
-</footer>
+      <div class="line"></div>
 
+      <div class="section-title">Details</div>
+      ・公共交通 / プログラミング<br>
+      ・DTM / 作曲 / 電子工作<br>
+      ・鉄道 / 車 / 旅行
+
+      <div class="line"></div>
+
+      <div class="section-title">Contact</div>
+      mail@example.com
+
+      <div class="qr">
+        <!-- QRコード（外部API） -->
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://twitter.com/38_2C">
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
 </body>
 </html>
