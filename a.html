@@ -3,180 +3,141 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>38.2°C Web名刺</title>
+<title>38.2°C Profile</title>
 
 <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
 
 <style>
 body {
   margin: 0;
-  background: #0d0d0d;
+  background: #0a0a0a;
+  color: white;
   font-family: "DotGothic16", sans-serif;
+  line-height: 1.6;
+}
+
+section {
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.hero {
+  height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
 }
 
-.card {
-  max-width: 900px;
-  width: 100%;
-  margin: 20px;
-  border-radius: 20px;
-  overflow: hidden;
-  background: linear-gradient(135deg, #1aa39a, #2fd3b5);
-  box-shadow: 0 10px 40px rgba(0,0,0,0.4);
-}
-
-/* 上部 */
-.header {
-  position: relative;
-  padding: 20px;
-  color: white;
-}
-
-.bg {
-  position: absolute;
-  inset: 0;
-  background: url('your-image.jpg') center/cover;
-  opacity: 0.35;
-}
-
-.header-content {
-  position: relative;
-}
-
 .temp {
-  font-size: 64px;
-  text-align: right;
+  font-size: 80px;
 }
 
 .name {
-  font-size: 24px;
+  font-size: 28px;
+  opacity: 0.8;
 }
 
-/* 本文 */
-.main {
-  display: flex;
-  flex-wrap: wrap;
-  color: white;
-}
-
-.left, .right {
-  padding: 20px;
-  box-sizing: border-box;
-}
-
-.left {
-  width: 40%;
-}
-
-.right {
-  width: 60%;
-}
-
-.section-title {
+.desc {
   margin-top: 10px;
   opacity: 0.7;
 }
 
-.line {
-  height: 2px;
-  background: white;
-  margin: 10px 0;
-  opacity: 0.4;
+.sns {
+  margin-top: 20px;
 }
 
-/* SNS */
 .sns a {
-  display: block;
-  color: white;
+  color: #2fd3b5;
   text-decoration: none;
-  margin: 4px 0;
-  transition: 0.2s;
+  margin-right: 15px;
 }
 
-.sns a:hover {
-  opacity: 0.6;
+h2 {
+  border-left: 4px solid #2fd3b5;
+  padding-left: 10px;
 }
 
-/* QR */
-.qr {
+.card {
+  background: #111;
+  padding: 15px;
   margin-top: 10px;
-}
-
-/* レスポンシブ */
-@media (max-width: 700px) {
-  .left, .right {
-    width: 100%;
-  }
-
-  .temp {
-    font-size: 48px;
-  }
+  border-radius: 10px;
 }
 </style>
 </head>
 
 <body>
-<div class="card">
 
-  <div class="header">
-    <div class="bg"></div>
-    <div class="header-content">
-      <div class="temp">38.2°C</div>
-      <div class="name">@38_2C</div>
-    </div>
+<!-- ファーストビュー -->
+<section class="hero">
+  <div class="temp">38.2°C</div>
+  <div class="name">@38_2C</div>
+  <div class="desc">
+    群馬県在住 / オタク / 音楽・開発系
   </div>
 
-  <div class="main">
-
-    <div class="left">
-      <div>
-        群馬県在住のオタク。<br>
-        ホロライブ / ホロスターズ好き
-      </div>
-
-      <div class="line"></div>
-
-      <div class="section-title">Skills</div>
-      B.Sax / Drums / Perc.
-
-      <div class="section-title">Affiliation</div>
-      ・Holofans Orchestra<br>
-      ・Holofans Ensemble<br>
-      ・FLOMIE 他
-    </div>
-
-    <div class="right">
-
-      <div class="section-title">Links</div>
-      <div class="sns">
-        <a href="https://twitter.com/38_2C" target="_blank">Twitter</a>
-        <a href="https://github.com/yourname" target="_blank">GitHub</a>
-        <a href="https://www.youtube.com/" target="_blank">YouTube</a>
-        <a href="https://discord.com/" target="_blank">Discord</a>
-      </div>
-
-      <div class="line"></div>
-
-      <div class="section-title">Details</div>
-      ・公共交通 / プログラミング<br>
-      ・DTM / 作曲 / 電子工作<br>
-      ・鉄道 / 車 / 旅行
-
-      <div class="line"></div>
-
-      <div class="section-title">Contact</div>
-      mail@example.com
-
-      <div class="qr">
-        <!-- QRコード（外部API） -->
-        <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://twitter.com/38_2C">
-      </div>
-
-    </div>
-
+  <div class="sns">
+    <a href="https://www.instagram.com/your_id" target="_blank" rel="noopener noreferrer">Instagram</a>
+    <a href="https://www.youtube.com/@your_channel" target="_blank" rel="noopener noreferrer">YouTube</a>
+    <a href="https://twitter.com/38_2C" target="_blank" rel="noopener noreferrer">Twitter</a>
   </div>
+</section>
 
-</div>
+<!-- 名刺内容（完全転記） -->
+<section>
+  <h2>About</h2>
+  <div class="card">
+    群馬県在住のオタクです。<br>
+    ホロライブとホロスターズ、茨ちがやさ姫！が好きです。<br>
+    サックスとドラムが出来ます。
+  </div>
+</section>
+
+<!-- スキル -->
+<section>
+  <h2>Skills</h2>
+  <div class="card">
+    B.Sax / Drums / Percussion
+  </div>
+</section>
+
+<!-- 所属・活動 -->
+<section>
+  <h2>Activity</h2>
+  <div class="card">
+    ・Holofans Orchestra<br>
+    ・Holofans Ensemble<br>
+    ・Holofan / Chihamic / FLOMIE<br>
+    ・Otomos / Pioneer / Stargazers
+  </div>
+</section>
+
+<!-- 出演作品（追加） -->
+<section>
+  <h2>Works</h2>
+  <div class="card">
+    ・（ここに出演作品を書く）<br>
+    ・例：○○ライブ出演<br>
+    ・例：○○演奏動画参加<br>
+  </div>
+</section>
+
+<!-- 詳細興味 -->
+<section>
+  <h2>Interests</h2>
+  <div class="card">
+    公共交通 / プログラミング / DTM / 作曲 / 電子工作 / 鉄道 / 車 / 旅行
+  </div>
+</section>
+
+<!-- 連絡 -->
+<section>
+  <h2>Contact</h2>
+  <div class="card">
+    mail@example.com
+  </div>
+</section>
+
 </body>
 </html>
