@@ -15,17 +15,18 @@
   font-style: normal;
 }
 body {
-  margin: 0;
-  background: #0a0a0a;
-  color: white;
+margin: 0;
+background: #0a0a0a;
+color: white;
+  font-family: "DotGothic16", sans-serif;
   font-family: "MisakiGothic", sans-serif;
-  line-height: 1.7;
+line-height: 1.7;
 }
-  
+
 section {
-  padding: 60px 20px;
-  max-width: 900px;
-  margin: auto;
+padding: 60px 20px;
+max-width: 900px;
+margin: auto;
 }
 
 /* ファーストビュー */
@@ -35,73 +36,73 @@ padding: 80px 20px;
 
 .temp {
   font-family: "DotGothic16", sans-serif;
-  font-size: 80px;
-  margin-bottom: 10px;
+font-size: 80px;
+margin-bottom: 10px;
 }
 
 .desc {
-  opacity: 0.7;
+opacity: 0.7;
 }
 
 /* SNS */
 .sns {
-  margin-top: 20px;
+margin-top: 20px;
 }
 
 .sns a {
-  color: #2fd3b5;
-  text-decoration: none;
-  margin-right: 15px;
-  border-bottom: 1px solid transparent;
+color: #2fd3b5;
+text-decoration: none;
+margin-right: 15px;
+border-bottom: 1px solid transparent;
 }
 
 .sns a:hover {
-  border-bottom: 1px solid #2fd3b5;
+border-bottom: 1px solid #2fd3b5;
 }
 
 /* セクション */
 h2 {
-  border-left: 4px solid #2fd3b5;
-  padding-left: 10px;
-  margin-bottom: 10px;
+border-left: 4px solid #2fd3b5;
+padding-left: 10px;
+margin-bottom: 10px;
 }
 
 .card {
-  background: #111;
-  padding: 20px;
-  border-radius: 10px;
+background: #111;
+padding: 20px;
+border-radius: 10px;
 }
 
 /* Works（動画） */
 .works {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 15px;
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 15px;
 }
 
 .works iframe {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  border: none;
-  border-radius: 8px;
+width: 100%;
+aspect-ratio: 16 / 9;
+border: none;
+border-radius: 8px;
 }
 
-  .footer {
-  text-align: center;
-  padding: 40px 20px;
-  font-size: 14px;
-  opacity: 0.5;
+.footer {
+text-align: center;
+padding: 40px 20px;
+font-size: 14px;
+opacity: 0.5;
 }
 
 /* レスポンシブ */
 @media (max-width: 700px) {
-  .temp {
-    font-size: 56px;
-  }
+.temp {
+font-size: 56px;
+}
 
-  .works {
-    grid-template-columns: 1fr;
-  }
+.works {
+grid-template-columns: 1fr;
+}
 }
 </style>
 </head>
@@ -109,75 +110,59 @@ h2 {
 <body>
 
 <section class="hero">
-  <div class="temp">38.2°C</div>
-<div class="desc"
- data-ja="群馬県在住 / オタク / 音楽・開発"
- data-en="Based in Gunma / Otaku / Music & Development">
+<div class="temp">38.2°C</div>
+<div class="desc">
+群馬県在住 / オタク / 音楽・開発
 </div>
 
-  <div class="sns">
-    <a href="https://www.instagram.com/382c_konetsu" target="_blank" rel="noopener noreferrer">Instagram</a>
-    <a href="https://www.youtube.com/@38.2C" target="_blank" rel="noopener noreferrer">YouTube</a>
-    <a href="https://twitter.com/38_2C" target="_blank" rel="noopener noreferrer">Twitter</a>
-  </div>
-</section>
-
-<section>
-  <h2>About</h2>
-<div class="card"
- data-ja="群馬県在住のオタクです。<br>ホロライブとホロスターズ、超かぐや姫！が好きです。<br>サックスとドラムが出来ます。"
- data-en="Otaku based in Gunma, Japan.<br>Fan of Hololive, Holostars, and Cosmic Princess Kaguya!<br>Plays saxophone and drums.">
+<div class="sns">
+<a href="https://www.instagram.com/382c_konetsu" target="_blank" rel="noopener noreferrer">Instagram</a>
+<a href="https://www.youtube.com/@38.2C" target="_blank" rel="noopener noreferrer">YouTube</a>
+<a href="https://twitter.com/38_2C" target="_blank" rel="noopener noreferrer">Twitter</a>
 </div>
 </section>
 
 <section>
-  <h2>Skills</h2>
-  <div class="card">
-    S.Sax / T.Sax / B.Sax / Drums / Percussion
-  </div>
+<h2>About</h2>
+<div class="card">
+群馬県在住のオタクです。<br>
+ホロライブとホロスターズ、超かぐや姫！が好きです。<br>
+サックスとドラムが出来ます。
+</div>
 </section>
 
 <section>
-  <h2>A Member Of</h2>
-  <div class="card">
-    ・Holofans Orchestra<br>
-    ・Holofans Ensemble<br>
-    ・Holofan / ChihaNic / FLOMIE / Otomos / Pioneer / Stargazers
-  </div>
+<h2>Skills</h2>
+<div class="card">
+S.Sax / T.Sax / B.Sax / Drums / Percussion
+</div>
 </section>
 
 <section>
-  <h2>Works</h2>
-  <div class="card works">
-    <iframe src="https://www.youtube.com/embed/bNybLpk6HKQ" allowfullscreen></iframe>
-    <iframe src="https://www.youtube.com/embed/BEX7H7ff2Lw" allowfullscreen></iframe>
-  </div>
+<h2>A Member Of</h2>
+<div class="card">
+・Holofans Orchestra<br>
+・Holofans Ensemble<br>
+・Holofan / ChihaNic / FLOMIE / Otomos / Pioneer / Stargazers
+</div>
 </section>
 
 <section>
-  <h2>Interests</h2>
-<div class="card"
- data-ja="プログラミング / DTM / 編曲 / 作曲 / 電子工作 / 鉄道 / 車 / 旅行"
- data-en="Programming / DTM / Arrangement / Composition / Electronics / Railways / Cars / Travel">
+<h2>Works</h2>
+<div class="card works">
+<iframe src="https://www.youtube.com/embed/bNybLpk6HKQ" allowfullscreen></iframe>
+<iframe src="https://www.youtube.com/embed/BEX7H7ff2Lw" allowfullscreen></iframe>
+</div>
+</section>
+
+<section>
+<h2>Interests</h2>
+<div class="card">
+プログラミング / DTM / 編曲 / 作曲 / 電子工作 / 鉄道 / 車 / 旅行
 </div>
 </section>
 <footer class="footer">
-  © 2026 38.2°C All Rights Reserved.
+© 2026 38.2°C All Rights Reserved.
 </footer>
-  <script>
-(function () {
-  const lang = navigator.language || navigator.userLanguage;
-
-  // 英語判定（enで始まるか）
-  const isEnglish = lang.toLowerCase().startsWith("en");
-
-  if (!isEnglish) return;
-
-  // data-enがある要素を全部置き換え
-  document.querySelectorAll("[data-en]").forEach(el => {
-    el.innerHTML = el.getAttribute("data-en");
-  });
-})();
-</script>
 </body>
 </html>
