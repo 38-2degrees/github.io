@@ -190,14 +190,28 @@ S.Sax / T.Sax / B.Sax / Drums / Percussion
     }
   };
 
-  const userLang = navigator.language.startsWith('ja') ? 'ja' : 'en';
-  document.querySelectorAll('[data-i18n]').forEach(el => {
-    const key = el.getAttribute('data-i18n');
-    if (dict[userLang][key]) {
-      el.innerHTML = dict[userLang][key];
-    }
-  });
-  document.documentElement.lang = userLang;
+  const updateLanguage = () => {
+    // 1. URLパラメータに ?lang=en があればそれを優先
+    const params = new URLSearchParams(window.location.search);
+    const paramLang = params.get('lang');
+    
+    // 2. パラメータがない場合はブラウザ設定を確認
+    let userLang = paramLang || (navigator.language.startsWith('ja') ? 'ja' : 'en');
+
+    // 辞書にない言語（例：fr）の場合は英語にする
+    if (!dict[userLang]) userLang = 'en';
+    
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      if (dict[userLang][key]) {
+        el.innerHTML = dict[userLang][key];
+      }
+    });
+    
+    document.documentElement.lang = userLang;
+  };
+
+  window.addEventListener('DOMContentLoaded', updateLanguage);
 </script>
 
 </body>
