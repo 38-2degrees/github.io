@@ -9,101 +9,101 @@
 
 <style>
   @font-face {
-  font-family: "MisakiGothic";
-  src: url("misaki_gothic_2nd.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-body {
-margin: 0;
-background: #0a0a0a;
-color: white;
-  font-family: "DotGothic16", sans-serif;
-  font-family: "MisakiGothic", sans-serif;
-line-height: 1.7;
-}
+    font-family: "MisakiGothic";
+    src: url("misaki_gothic_2nd.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  }
+  body {
+    margin: 0;
+    background: #0a0a0a;
+    color: white;
+    font-family: "DotGothic16", sans-serif;
+    font-family: "MisakiGothic", sans-serif;
+    line-height: 1.7;
+  }
 
-section {
-padding: 60px 20px;
-max-width: 900px;
-margin: auto;
-}
+  section {
+    padding: 60px 20px;
+    max-width: 900px;
+    margin: auto;
+  }
 
-/* ファーストビュー */
-.hero {
-padding: 80px 20px;
-}
+  /* ファーストビュー */
+  .hero {
+    padding: 80px 20px;
+  }
 
-.temp {
-  font-family: "DotGothic16", sans-serif;
-font-size: 80px;
-margin-bottom: 10px;
-}
+  .temp {
+    font-family: "DotGothic16", sans-serif;
+    font-size: 80px;
+    margin-bottom: 10px;
+  }
 
-.desc {
-opacity: 0.7;
-}
+  .desc {
+    opacity: 0.7;
+  }
 
-/* SNS */
-.sns {
-margin-top: 20px;
-}
+  /* SNS */
+  .sns {
+    margin-top: 20px;
+  }
 
-.sns a {
-color: #2fd3b5;
-text-decoration: none;
-margin-right: 15px;
-border-bottom: 1px solid transparent;
-}
+  .sns a {
+    color: #2fd3b5;
+    text-decoration: none;
+    margin-right: 15px;
+    border-bottom: 1px solid transparent;
+  }
 
-.sns a:hover {
-border-bottom: 1px solid #2fd3b5;
-}
+  .sns a:hover {
+    border-bottom: 1px solid #2fd3b5;
+  }
 
-/* セクション */
-h2 {
-border-left: 4px solid #2fd3b5;
-padding-left: 10px;
-margin-bottom: 10px;
-}
+  /* セクション */
+  h2 {
+    border-left: 4px solid #2fd3b5;
+    padding-left: 10px;
+    margin-bottom: 10px;
+  }
 
-.card {
-background: #111;
-padding: 20px;
-border-radius: 10px;
-}
+  .card {
+    background: #111;
+    padding: 20px;
+    border-radius: 10px;
+  }
 
-/* Works（動画） */
-.works {
-display: grid;
-grid-template-columns: 1fr 1fr;
-gap: 15px;
-}
+  /* Works（動画） */
+  .works {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+  }
 
-.works iframe {
-width: 100%;
-aspect-ratio: 16 / 9;
-border: none;
-border-radius: 8px;
-}
+  .works iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: none;
+    border-radius: 8px;
+  }
 
-.footer {
-text-align: center;
-padding: 40px 20px;
-font-size: 14px;
-opacity: 0.5;
-}
+  .footer {
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 14px;
+    opacity: 0.5;
+  }
 
-/* レスポンシブ */
-@media (max-width: 700px) {
-.temp {
-font-size: 56px;
-}
+  /* レスポンシブ */
+  @media (max-width: 700px) {
+    .temp {
+      font-size: 56px;
+    }
 
-.works {
-grid-template-columns: 1fr;
-}
-}
+    .works {
+      grid-template-columns: 1fr;
+    }
+  }
 </style>
 </head>
 
@@ -111,7 +111,7 @@ grid-template-columns: 1fr;
 
 <section class="hero">
 <div class="temp">38.2°C</div>
-<div class="desc">
+<div class="desc" data-i18n="desc">
 群馬県在住 / オタク / 音楽・開発
 </div>
 
@@ -123,8 +123,8 @@ grid-template-columns: 1fr;
 </section>
 
 <section>
-<h2>About</h2>
-<div class="card">
+<h2 data-i18n="h-about">About</h2>
+<div class="card" data-i18n="c-about">
 群馬県在住のオタクです。<br>
 ホロライブとホロスターズ、超かぐや姫！が好きです。<br>
 サックスとドラムが出来ます。
@@ -132,14 +132,14 @@ grid-template-columns: 1fr;
 </section>
 
 <section>
-<h2>Skills</h2>
+<h2 data-i18n="h-skills">Skills</h2>
 <div class="card">
 S.Sax / T.Sax / B.Sax / Drums / Percussion
 </div>
 </section>
 
 <section>
-<h2>A Member Of</h2>
+<h2 data-i18n="h-member">A Member Of</h2>
 <div class="card">
 ・Holofans Orchestra<br>
 ・Holofans Ensemble<br>
@@ -148,7 +148,7 @@ S.Sax / T.Sax / B.Sax / Drums / Percussion
 </section>
 
 <section>
-<h2>Works</h2>
+<h2 data-i18n="h-works">Works</h2>
 <div class="card works">
 <iframe src="https://www.youtube.com/embed/bNybLpk6HKQ" allowfullscreen></iframe>
 <iframe src="https://www.youtube.com/embed/BEX7H7ff2Lw" allowfullscreen></iframe>
@@ -156,13 +156,49 @@ S.Sax / T.Sax / B.Sax / Drums / Percussion
 </section>
 
 <section>
-<h2>Interests</h2>
-<div class="card">
+<h2 data-i18n="h-interests">Interests</h2>
+<div class="card" data-i18n="c-interests">
 プログラミング / DTM / 編曲 / 作曲 / 電子工作 / 鉄道 / 車 / 旅行
 </div>
 </section>
+
 <footer class="footer">
 © 2026 38.2°C All Rights Reserved.
 </footer>
+
+<script>
+  const dict = {
+    ja: {
+      "desc": "群馬県在住 / オタク / 音楽・開発",
+      "h-about": "About",
+      "c-about": "群馬県在住のオタクです。<br>ホロライブとホロスターズ、超かぐや姫！が好きです。<br>サックスとドラムが出来ます。",
+      "h-skills": "Skills",
+      "h-member": "A Member Of",
+      "h-works": "Works",
+      "h-interests": "Interests",
+      "c-interests": "プログラミング / DTM / 編曲 / 作曲 / 電子工作 / 鉄道 / 車 / 旅行"
+    },
+    en: {
+      "desc": "Based in Gunma / Otaku / Music & Development",
+      "h-about": "About",
+      "c-about": "I'm an Otaku living in Gunma, Japan.<br>I love Hololive, Holostars, and Cho-Kaguyahime!<br>I can play Saxophones and Drums.",
+      "h-skills": "Skills",
+      "h-member": "A Member Of",
+      "h-works": "Works",
+      "h-interests": "Interests",
+      "c-interests": "Programming / DTM / Arrangement / Composition / Electronic Work / Railway / Car / Travel"
+    }
+  };
+
+  const userLang = navigator.language.startsWith('ja') ? 'ja' : 'en';
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (dict[userLang][key]) {
+      el.innerHTML = dict[userLang][key];
+    }
+  });
+  document.documentElement.lang = userLang;
+</script>
+
 </body>
 </html>
