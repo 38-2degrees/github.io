@@ -21,6 +21,7 @@ body {
   font-family: "MisakiGothic", sans-serif;
   line-height: 1.7;
 }
+  
 section {
   padding: 60px 20px;
   max-width: 900px;
@@ -109,9 +110,10 @@ h2 {
 
 <section class="hero">
   <div class="temp">38.2°C</div>
-  <div class="desc">
-    群馬県在住 / オタク / 音楽・開発
-  </div>
+<div class="desc"
+ data-ja="群馬県在住 / オタク / 音楽・開発"
+ data-en="Based in Gunma / Otaku / Music & Development">
+</div>
 
   <div class="sns">
     <a href="https://www.instagram.com/382c_konetsu" target="_blank" rel="noopener noreferrer">Instagram</a>
@@ -122,11 +124,10 @@ h2 {
 
 <section>
   <h2>About</h2>
-  <div class="card">
-    群馬県在住のオタクです。<br>
-    ホロライブとホロスターズ、超かぐや姫！が好きです。<br>
-    サックスとドラムが出来ます。
-  </div>
+<div class="card"
+ data-ja="群馬県在住のオタクです。<br>ホロライブとホロスターズ、超かぐや姫！が好きです。<br>サックスとドラムが出来ます。"
+ data-en="Otaku based in Gunma, Japan.<br>Fan of Hololive, Holostars, and Cosmic Princess Kaguya!<br>Plays saxophone and drums.">
+</div>
 </section>
 
 <section>
@@ -155,12 +156,28 @@ h2 {
 
 <section>
   <h2>Interests</h2>
-  <div class="card">
-    プログラミング / DTM / 編曲 / 作曲 / 電子工作 / 鉄道 / 車 / 旅行
-  </div>
+<div class="card"
+ data-ja="プログラミング / DTM / 編曲 / 作曲 / 電子工作 / 鉄道 / 車 / 旅行"
+ data-en="Programming / DTM / Arrangement / Composition / Electronics / Railways / Cars / Travel">
+</div>
 </section>
 <footer class="footer">
   © 2026 38.2°C All Rights Reserved.
 </footer>
+  <script>
+(function () {
+  const lang = navigator.language || navigator.userLanguage;
+
+  // 英語判定（enで始まるか）
+  const isEnglish = lang.toLowerCase().startsWith("en");
+
+  if (!isEnglish) return;
+
+  // data-enがある要素を全部置き換え
+  document.querySelectorAll("[data-en]").forEach(el => {
+    el.innerHTML = el.getAttribute("data-en");
+  });
+})();
+</script>
 </body>
 </html>
