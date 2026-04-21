@@ -247,14 +247,23 @@ S.Sax / T.Sax / B.Sax / Drums / Percussion
   };
 
   const initLanguage = () => {
-    // 1. URLパラメータに ?lang=en があればそれを優先
+    // 1. URLパラメータに ?lang=xx があればそれを優先
     const params = new URLSearchParams(window.location.search);
     const paramLang = params.get('lang');
 
-    // 2. パラメータがない場合はブラウザ設定を確認
-    let userLang = paramLang || (navigator.language.startsWith('ja') ? 'ja' : 'en');
+    let userLang;
+    if (paramLang) {
+      // URLパラメータ優先
+      userLang = paramLang;
+    } else {
+      // 2. navigator.languages（複数）を順に確認し、最初にjaが来たらja、それ以外はen
+      const primaryLang = (navigator.languages && navigator.languages.length)
+        ? navigator.languages[0]
+        : navigator.language;
+      userLang = primaryLang.startsWith('ja') ? 'ja' : 'en';
+    }
 
-    // 辞書にない言語（例：fr）の場合は英語にする
+    // 辞書にない言語はenにフォールバック
     if (!dict[userLang]) userLang = 'en';
 
     setLanguage(userLang);
